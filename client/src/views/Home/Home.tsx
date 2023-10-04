@@ -3,9 +3,7 @@ import './Home.scss'
 
 function Home() {
   return (
-    <div>
-      <h1>HOLAAA</h1>
-    </div>
+    <main>Home</main>
   )
 }
 export default Home

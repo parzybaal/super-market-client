@@ -1,11 +1,11 @@
 import './Error.scss'
 
-function Error() {
+function NotFound() {
   return (
-    <div style={{ textAlign: 'center', marginTop: '20em'}}>
+    <section style={{ textAlign: 'center', marginTop: '20em'}}>
         <h1>404 - Página no encontrada</h1>
         <p>Lo sentimos, la página que estás buscando no existe.</p>
-    </div>
+    </section>
   )
 }
-export default Error
+export default NotFound;
