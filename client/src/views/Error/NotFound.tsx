@@ -1,6 +1,6 @@
-import './Error.scss'
+import './NotFound.scss'
 
-function NotFound() {
+function NotFound () {
   return (
     <section style={{ textAlign: 'center', marginTop: '20em'}}>
         <h1>404 - Página no encontrada</h1>
