@@ -1,6 +1,5 @@
 import './App.scss'
-import {useLocation} from 'react-router-dom';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import Landing from './views/Landing/Landing';
 import Home from './views/Home/Home';

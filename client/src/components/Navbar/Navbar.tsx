@@ -2,9 +2,9 @@ import './Navbar.scss'
 
 function Navbar() {
   return (
-    <div>
+    <nav>
         Navbar
-    </div>
+    </nav>
   )
 }
 export default Navbar
