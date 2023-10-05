@@ -5,10 +5,8 @@ import Detail from "../views/Detail/Detail";
 import NotFound from "../views/Error/NotFound";
 
 const AppRouter = () => {
-  //const location = useLocation();
   return (
     <>
-      {/* {location.pathname !== '/' && <Navbar />} */}
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -21,4 +19,4 @@ const AppRouter = () => {
   )
 }
 
-export default AppRouter;
+export default AppRouter; 
