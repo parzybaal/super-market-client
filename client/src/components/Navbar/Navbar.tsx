@@ -1,6 +1,5 @@
-import { Box, Select, Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import { NavLink } from 'react-router-dom'
-import { Image } from '@mui/icons-material'
 import Searchbar from '../Searchbar/Searchbar'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -8,26 +7,37 @@ import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { useState } from "react";
 import './Navbar.scss'
 
 function Navbar() {
+    const [category, setCategory] = useState('');
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setCategory(event.target.value);
+  };
+
   return (
     <Box className='navbar-container'>
-      <Stack>
-        <Image>logo</Image>
+      <Stack className='stack-first-container'>
+        <img src='../../assets/logoSuperMarket.png' alt="SuperMarket" className='logo' />
         <Searchbar />
-        <Stack>
-          <NavLink to='/login'>
+        <Stack className='stack-links'>
+          <NavLink to='/login' style={{ textDecoration: 'none', color: 'white' }}>
             Iniciar sesion
           </NavLink>
-          <NavLink to='/profile'>
+          <NavLink to='/profile' style={{ textDecoration: 'none', color: 'white' }}>
             <AccountCircleIcon />
           </NavLink>
-          <NavLink to='/favorites'>
+          <NavLink to='/favorites' style={{ textDecoration: 'none', color: 'white' }}>
             <FavoriteIcon />
           </NavLink>
-          <NavLink to='/cart'>
-            <Badge badgeContent={'cart?.length'} color="secondary">
+          <NavLink to='/cart' style={{ textDecoration: 'none', color: 'white' }}>
+            <Badge badgeContent={'1'} color="secondary">
               <ShoppingCart />
             </Badge>
           </NavLink>
@@ -35,9 +45,21 @@ function Navbar() {
       </Stack>
       <Stack>
         <Stack>
-          <Select>
-            Category
+        <FormControl variant="standard">
+          <InputLabel id="demo-simple-select-standard-label">Categorías</InputLabel>
+          <Select
+            labelId="demo-simple-select-standard-label"
+            id="demo-simple-select-standard"
+            value={category}
+            onChange={handleChange}
+            label="Category"
+          >
+            <MenuItem value="">
+              <em>Todas</em>
+            </MenuItem>
+            <MenuItem value={10}>Map categories</MenuItem>
           </Select>
+        </FormControl>
           <NavLink to='/offers'>
             Ofertas
           </NavLink>
