@@ -43,36 +43,37 @@ function Navbar() {
           </NavLink>
         </Stack>
       </Stack>
-      <Stack>
-        <Stack>
-        <FormControl variant="standard">
-          <InputLabel id="demo-simple-select-standard-label">Categorías</InputLabel>
-          <Select
-            labelId="demo-simple-select-standard-label"
-            id="demo-simple-select-standard"
-            value={category}
-            onChange={handleChange}
-            label="Category"
-          >
-            <MenuItem value="">
-              <em>Todas</em>
-            </MenuItem>
-            <MenuItem value={10}>Map categories</MenuItem>
-          </Select>
-        </FormControl>
+      <Stack className='stack-second-container'>
+        <Stack className='stack-second-1'>
+          <FormControl variant="standard" className='select-container'>
+            <InputLabel id="demo-simple-select-standard-label" className='select-label'>Categorías</InputLabel>
+            <Select
+              className='select-input'
+              labelId="demo-simple-select-standard-label"
+              id="demo-simple-select-standard"
+              value={category}
+              onChange={handleChange}
+              label="Category"
+            >
+              <MenuItem value="">
+                <em>Todas</em>
+              </MenuItem>
+              <MenuItem value={10}>Map categories</MenuItem>
+            </Select>
+          </FormControl>
           <NavLink to='/offers'>
-            Ofertas
+            <p className='stack-second-navlinks'>Ofertas</p>
           </NavLink>
           <NavLink to='/help'>
-            Ayuda
+            <p className='stack-second-navlinks'>Ayuda</p>
           </NavLink>
           <NavLink to='/history'>
-            Historial
+            <p className='stack-second-navlinks'>Historial</p>
           </NavLink>
         </Stack>
-        <Stack>
-          <LocalPhoneIcon />
-          <Typography variant="h1" component="h2">0800-999-9999</Typography>
+        <Stack className='stack-second-2'>
+          <LocalPhoneIcon className='stack-logo-phone' />
+          <Typography variant="h1" className='stack-p-phone' component="h2">0800-999-9999</Typography>
         </Stack>
       </Stack>
     </Box>

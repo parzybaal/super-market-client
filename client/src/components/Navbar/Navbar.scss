@@ -28,6 +28,67 @@
             justify-content: space-around;
             flex-direction: row;
             width: 20em;
+            color: #F9F9F9;
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    .stack-second-container{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        .stack-second-1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            margin-right: 2em;
+            width: 100%;
+            .select-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: .8em;
+                .select-label{
+                    font-size: 15px;
+                    color: #F9F9F9;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+                .select-input{
+                    width: 6em;
+                }
+            }
+            .stack-second-navlinks{
+                font-size: 15px;
+                margin-left: 3em;
+                margin-right: 3em;
+                color: #F9F9F9;
+                font-family: Roboto;
+                font-weight: 700;
+                
+            }
+        }
+        .stack-second-2{
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-direction: row;
+            width: 10em;
+            margin-right: 2em;
+            .stack-logo-phone{
+                width: .7em;
+                height: .7em;
+            }
+            .stack-p-phone{
+                color: #F9F9F9;
+                font-family: Roboto;
+                font-size: 15px;
+                font-style: italic;
+                font-weight: 400;
+            }
         }
     }
 }
