@@ -1,8 +1,12 @@
-import { BrowserRouter as Router, Routes, Route, /* useLocation */ } from "react-router-dom";
-import Landing from "../views/Landing/Landing";
-import Home from "../views/Home/Home";
-import Detail from "../views/Detail/Detail";
-import NotFound from "../views/Error/NotFound";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route /* useLocation */,
+} from "react-router-dom";
+import Landing from "../pages/Landing/Landing";
+import Home from "../pages/Home/Home";
+import Detail from "../pages/Detail/Detail";
+import NotFound from "../pages/Error/NotFound";
 
 const AppRouter = () => {
   //const location = useLocation();
@@ -14,11 +18,11 @@ const AppRouter = () => {
           <Route path="/" element={<Landing />} />
           <Route path="/home" element={<Home />} />
           <Route path="/details/:id" element={<Detail />} />
-          <Route path='/*' element={<NotFound />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </Router>
     </>
-  )
-}
+  );
+};
 
 export default AppRouter;
