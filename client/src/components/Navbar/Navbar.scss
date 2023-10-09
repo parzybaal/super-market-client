@@ -18,8 +18,6 @@
         padding-bottom: .5em;
         height: 3em;
         .logo{
-            width: 3em;
-            height: 3em;
             object-fit: cover;
             object-position: center;
         }
@@ -44,13 +42,14 @@
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            margin-right: 2em;
+            margin-left: 3em;
             width: 100%;
             .select-container{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-bottom: .8em;
+                border: none;
                 .select-label{
                     font-size: 15px;
                     color: #F9F9F9;
@@ -64,12 +63,9 @@
             }
             .stack-second-navlinks{
                 font-size: 15px;
-                margin-left: 3em;
-                margin-right: 3em;
                 color: #F9F9F9;
                 font-family: Roboto;
                 font-weight: 700;
-                
             }
         }
         .stack-second-2{

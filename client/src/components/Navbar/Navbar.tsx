@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useState } from "react";
+import Logo from '../../assets/logoSuperMarket.png';
 import './Navbar.scss'
 
 function Navbar() {
@@ -24,7 +25,7 @@ function Navbar() {
   return (
     <Box className='navbar-container'>
       <Stack className='stack-first-container'>
-        <img src='../../assets/logoSuperMarket.png' alt="SuperMarket" className='logo' />
+        <img src={Logo} alt="SuperMarket" className='logo' />
         <Searchbar />
         <Stack className='stack-links'>
           <NavLink to='/login' style={{ textDecoration: 'none', color: 'white' }}>
@@ -45,7 +46,7 @@ function Navbar() {
       </Stack>
       <Stack className='stack-second-container'>
         <Stack className='stack-second-1'>
-          <FormControl variant="standard" className='select-container'>
+          <FormControl variant="standard" className='select-container' style={{ textDecoration: 'none', color: 'white', marginLeft: '3em', marginRight: '3em'}}>
             <InputLabel id="demo-simple-select-standard-label" className='select-label'>Categorías</InputLabel>
             <Select
               className='select-input'
@@ -61,13 +62,13 @@ function Navbar() {
               <MenuItem value={10}>Map categories</MenuItem>
             </Select>
           </FormControl>
-          <NavLink to='/offers'>
+          <NavLink style={{ textDecoration: 'none', color: 'white', marginLeft: '3em', marginRight: '3em'}} to='/offers'>
             <p className='stack-second-navlinks'>Ofertas</p>
           </NavLink>
-          <NavLink to='/help'>
+          <NavLink style={{ textDecoration: 'none', color: 'white', marginLeft: '3em', marginRight: '3em'}} to='/help'>
             <p className='stack-second-navlinks'>Ayuda</p>
           </NavLink>
-          <NavLink to='/history'>
+          <NavLink style={{ textDecoration: 'none', color: 'white', marginLeft: '3em', marginRight: '3em'}} to='/history'>
             <p className='stack-second-navlinks'>Historial</p>
           </NavLink>
         </Stack>
