@@ -9,10 +9,8 @@ import Detail from "../pages/Detail/Detail";
 import NotFound from "../pages/Error/NotFound";
 
 const AppRouter = () => {
-  //const location = useLocation();
   return (
     <>
-      {/* {location.pathname !== '/' && <Navbar />} */}
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
