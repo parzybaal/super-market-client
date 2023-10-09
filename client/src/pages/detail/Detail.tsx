@@ -1,5 +1,4 @@
 import { Divider, Stack, Typography } from "@mui/material";
-import "./Detail.scss";
 import SwipeableTextMobileStepper from "./components/Swipeable";
 import { useLocation } from "react-router-dom";
 import CustomButton from "../../components/Button/CustomButton";
@@ -11,6 +10,8 @@ import CreditCardIcon from "@mui/icons-material/CreditCard";
 import AddToCartButton from "./components/AddToCartButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
+import styles from "./styles/index";
+import EllipsisText from "../../components/EllipsisText/EllipsisText";
 
 const product: Product = {
   title:
@@ -55,31 +56,13 @@ function Detail() {
   const [fav, setFav] = useState<number>(0);
   console.log(fav);
 
+  console.log(styles.container);
+
   return (
-    <Stack
-      flexDirection={"row"}
-      textAlign={"start"}
-      gap={"3rem"}
-      sx={{
-        backgroundColor: "#EFEFEF",
-        height: "100vh",
-        alignItems: "center",
-        padding: "0 5rem",
-      }}
-    >
+    <Stack sx={styles.container}>
       <SwipeableTextMobileStepper images={product.gallery.template} />
-      <Stack gap="0.4rem">
-        <Typography
-          variant="h4"
-          sx={{
-            width: "800px",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-          }}
-        >
-          {product.title}
-        </Typography>
+      <Stack gap="0.4rem" maxWidth={"1000px"}>
+        <EllipsisText title={product.title} width="700px" />
         <Typography
           color="rgba(0, 0, 0, 0.5)"
           sx={{ textDecoration: "line-through" }}
@@ -106,9 +89,10 @@ function Detail() {
           <Stack
             flexDirection={"row"}
             gap={"0.7rem"}
-            onClick={() =>
-              alert("Se añadió a favoritos, no me maten por el alert")
-            }
+            onClick={() => {
+              setFav(1);
+              alert("Se añadió a favoritos, no me maten por el alert");
+            }}
             sx={{ cursor: "pointer" }}
           >
             <FavoriteIcon sx={{ color: "red" }} />
