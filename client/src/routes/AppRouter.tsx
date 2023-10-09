@@ -6,7 +6,6 @@ import NotFound from "../views/Error/NotFound";
 import Navbar from "../components/Navbar/Navbar";
 
 const AppRouter = () => {
-
   return (
     <>
       <Router>
@@ -22,4 +21,4 @@ const AppRouter = () => {
   )
 }
 
-export default AppRouter;
+export default AppRouter; 
