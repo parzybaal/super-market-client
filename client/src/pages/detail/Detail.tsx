@@ -56,13 +56,11 @@ function Detail() {
   const [fav, setFav] = useState<number>(0);
   console.log(fav);
 
-  console.log(styles.container);
-
   return (
     <Stack sx={styles.container}>
       <SwipeableTextMobileStepper images={product.gallery.template} />
-      <Stack gap="0.4rem" maxWidth={"1000px"}>
-        <EllipsisText title={product.title} width="700px" />
+      <Stack gap="0.4rem">
+        <EllipsisText title={product.title} lines={1} />
         <Typography
           color="rgba(0, 0, 0, 0.5)"
           sx={{ textDecoration: "line-through" }}
@@ -100,7 +98,7 @@ function Detail() {
           </Stack>
         </Stack>
         <Divider sx={{ margin: "0.8rem 0" }} />
-        <Typography>{product.description}</Typography>
+        <EllipsisText title={product.description} lines={5} />
         <Stack>
           <Typography>
             <span style={{ fontWeight: "bold" }}>12</span> cuotas de

@@ -37,7 +37,6 @@ const CustomButton: React.FC<Props> = ({
           backgroundColor,
           alignItems: "center",
           color,
-          background: "transparent",
           border: "none",
         },
         styles,

@@ -5,14 +5,11 @@ interface Styles {
 const styles: Styles = {
   container: {
     backgroundColor: "#EFEFEF",
-    height: "100vh",
     alignItems: "center",
     padding: "0 5rem",
     flexDirection: "row",
     textAlign: "start",
     gap: "3rem",
-    minWidth: "100%",
-    width: "100%",
   },
 };
 
