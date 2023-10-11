@@ -1,8 +1,42 @@
-import './Searchbar.scss';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import SearchIcon from '@mui/icons-material/Search';
+import { Button, Grid } from '@mui/material';
 
-function Searchbar() {
+export default function Searchbar() {
   return (
-    <div>Searchbar</div>
-  )
+    <Grid  container justifyContent='center' alignItems="center" >
+      <Grid item xs={8.5}>
+        <Autocomplete
+          freeSolo
+          id="free-solo-1-demo"
+          disableClearable
+          options={products.map((option) => option.title)}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              placeholder="Buscar...."
+              sx={{background:'white', borderRadius:'6px'}}
+              InputProps={{
+                ...params.InputProps,
+                type: 'search',
+                
+              }}
+            />
+          )}
+        />
+      </Grid>
+      <Grid item>
+        <Button sx={{position:'relative',right:'4.6em', height:'4em', borderRadius:'0 6px 6px 0'}} style={{ color: 'black' }}>
+          <SearchIcon />
+        </Button>
+      </Grid>
+    </Grid>
+  );
 }
-export default Searchbar
+
+// Map de los productos autocomplete
+const products = [
+  { title: 'MAP PRODUCTS' },
+];
+
