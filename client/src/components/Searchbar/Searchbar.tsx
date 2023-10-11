@@ -5,8 +5,8 @@ import { Button, Grid } from '@mui/material';
 
 export default function Searchbar() {
   return (
-    <Grid  container justifyContent='center' alignItems="center">
-      <Grid item xs={7.5}>
+    <Grid  container justifyContent='center' alignItems="center" >
+      <Grid item xs={8.5}>
         <Autocomplete
           freeSolo
           id="free-solo-1-demo"
@@ -27,7 +27,7 @@ export default function Searchbar() {
         />
       </Grid>
       <Grid item>
-        <Button sx={{position:'relative',right:'4.5em', height:'4em', borderRadius:'0 6px 6px 0'}} style={{ color: 'black' }}>
+        <Button sx={{position:'relative',right:'4.6em', height:'4em', borderRadius:'0 6px 6px 0'}} style={{ color: 'black' }}>
           <SearchIcon />
         </Button>
       </Grid>
