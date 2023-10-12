@@ -5,6 +5,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Images from "./models/images.interface";
+import styles from "./styles";
 
 const SwipeableTextMobileStepper: React.FC<Images> = ({ images }) => {
   const [activeStep, setActiveStep] = useState<number>(0);
@@ -25,7 +26,7 @@ const SwipeableTextMobileStepper: React.FC<Images> = ({ images }) => {
   };
 
   return (
-    <Box sx={{ maxWidth: 650, flexGrow: 1, position: "relative" }}>
+    <Box sx={styles.container}>
       <Carousel
         selectedItem={activeStep}
         onChange={handleStepChange}
@@ -36,28 +37,11 @@ const SwipeableTextMobileStepper: React.FC<Images> = ({ images }) => {
       >
         {images.map((step, index) => (
           <div key={index}>
-            <img
-              style={{
-                height: 550,
-                display: "block",
-                maxWidth: 650,
-                overflow: "hidden",
-                width: 650,
-              }}
-              src={step}
-            />
+            <img style={styles.img} src={step} />
           </div>
         ))}
       </Carousel>
-      <Stack
-        flexDirection={"row"}
-        justifyContent={"space-between"}
-        sx={{
-          position: "absolute",
-          top: 250,
-          width: 650,
-        }}
-      >
+      <Stack sx={styles.arrowContainer}>
         <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
           <KeyboardArrowLeftIcon sx={{ fontSize: 50 }} />
         </Button>

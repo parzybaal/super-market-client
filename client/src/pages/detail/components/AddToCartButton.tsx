@@ -3,6 +3,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
+import styles from "./styles/button";
 
 const AddToCartButton = () => {
   const [count, setCount] = useState<number>(0);
@@ -20,19 +21,7 @@ const AddToCartButton = () => {
       {count <= 0 ? (
         <Button
           variant="contained"
-          sx={{
-            padding: "15px",
-            borderRadius: "25px",
-            width: "200px",
-            height: "50px",
-            textTransform: "none",
-            alignItems: "center",
-            gap: "0.6rem",
-            backgroundColor: "#38A34A",
-            "&:hover": {
-              backgroundColor: "#246D30",
-            },
-          }}
+          sx={styles.button}
           onClick={() => incrementCount()}
         >
           <AddIcon sx={{ fontSize: 26 }} />
@@ -41,23 +30,7 @@ const AddToCartButton = () => {
           </Typography>
         </Button>
       ) : (
-        <Button
-          variant="contained"
-          sx={{
-            padding: "7px",
-            borderRadius: "25px",
-            width: "200px",
-            height: "50px",
-            textTransform: "none",
-            alignItems: "center",
-            gap: "0.6rem",
-            backgroundColor: "#38A34A",
-            "&:hover": {
-              backgroundColor: "#246D30",
-            },
-            justifyContent: "space-between",
-          }}
-        >
+        <Button variant="contained" sx={styles.activeButton}>
           <RemoveCircleIcon
             onClick={() => reduceCount()}
             sx={{ fontSize: 40 }}

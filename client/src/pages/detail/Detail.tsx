@@ -72,17 +72,13 @@ function Detail() {
           <Typography color={"#38A34A"}>${product.discount.text}</Typography>
         </Stack>
         <Typography color="rgba(0, 0, 0, 0.5)">
-          en 12 x ${product.offer_price / 12}
+          en 12 x ${(product.offer_price / 12).toFixed(2)}
         </Typography>
         <Divider sx={{ margin: "0.4rem 0" }} />
         <Typography color="rgba(0, 0, 0, 0.5)">
           Stock: {product.stock}
         </Typography>
-        <Stack
-          flexDirection={"row"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
-        >
+        <Stack flexDirection={"row"} alignItems={"center"} gap={"2rem"}>
           <AddToCartButton />
           <Stack
             flexDirection={"row"}
@@ -99,11 +95,11 @@ function Detail() {
         </Stack>
         <Divider sx={{ margin: "0.8rem 0" }} />
         <EllipsisText title={product.description} lines={5} />
-        <Stack>
+        <Stack gap={"0.4rem"}>
           <Typography>
             <span style={{ fontWeight: "bold" }}>12</span> cuotas de
             <span style={{ fontWeight: "bold" }}>
-              ${product.offer_price / 12}
+              {` $${(product.offer_price / 12).toFixed(2)}`}
             </span>
           </Typography>
           <Stack flexDirection={"row"} gap={"0.4rem"}>

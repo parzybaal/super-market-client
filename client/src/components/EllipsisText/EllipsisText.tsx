@@ -9,6 +9,7 @@ interface Title {
 const EllipsisText: React.FC<Title> = ({ title, lines = 1, styles = {} }) => {
   return (
     <Typography
+      title={title}
       sx={[
         {
           display: "-webkit-box",

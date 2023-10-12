@@ -3,7 +3,7 @@ import Home from "../pages/Home/Home";
 import Detail from "../pages/Detail/Detail";
 import NotFound from "../pages/Error/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-/* import Navbar from "../components/Navbar/Navbar"; */
+import Navbar from "../components/Navbar/Navbar";
 import SignIn from "../views/SignIn/SignIn";
 import SignUp from "../views/SignUp/SignUp";
 
@@ -11,7 +11,7 @@ const AppRouter = () => {
   return (
     <>
       <Router>
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/home" element={<Home />} />
